@@ -1,0 +1,84 @@
+{
+  "id": "689d0bf7-9fd2-4089-9331-67a33f9fbddf",
+  "version": "2.0",
+  "name": "test-qa-engineer",
+  "url": "https://boards.greenhouse.io/tribalcredit",
+  "tests": [{
+    "id": "f51b3ee8-7114-49d3-ad2c-70fe614b748a",
+    "name": "Dani",
+    "commands": [{
+      "id": "bc1a59d2-9240-4b0e-9429-6558f20d2afa",
+      "comment": "Open the system",
+      "command": "open",
+      "target": "https://boards.greenhouse.io/tribalcredit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5870cbc7-f594-4603-be1f-75b5696f950e",
+      "comment": "Click on the departament list",
+      "command": "click",
+      "target": "css=#s2id_departments-select b",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a3f3b4c-0a2e-46fd-a341-1f6b85c15149",
+      "comment": "Click to select Engineering option",
+      "command": "click",
+      "target": "css=ul li:nth-child(8)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dac14a5-4a43-4a3c-b96f-4b9a0900898a",
+      "comment": "Verify Engineering option",
+      "command": "verifySelectedLabel",
+      "target": "departments-select",
+      "targets": [],
+      "value": "Engineering"
+    }, {
+      "id": "cb1464c7-80f5-48de-848b-9b5f7938fcb2",
+      "comment": "Click on the Office list",
+      "command": "click",
+      "target": "css=#s2id_offices-select b",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a2efe44-e8c9-46f7-a978-ff7f5c6fab6c",
+      "comment": "Click to select \"Mexico\" option",
+      "command": "click",
+      "target": "css=ul li:nth-child(6)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "40d07db0-3b0c-4d4c-b49b-0f8c71d1d882",
+      "comment": "Verify Mexico option",
+      "command": "verifySelectedLabel",
+      "target": "offices-select",
+      "targets": [],
+      "value": "Mexico"
+    }, {
+      "id": "4fd0f13c-a8c0-4076-8942-5fcfa745d5c4",
+      "comment": "Verify \"QA Engineer\" on the page displayed",
+      "command": "verifyText",
+      "target": "linkText=Sr. QA Engineer",
+      "targets": [
+        ["linkText=Sr. QA Engineer", "linkText"],
+        ["css=.opening:nth-child(30) > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'Sr. QA Engineer')])[3]", "xpath:link"],
+        ["xpath=//div[@id='main']/section[7]/div[29]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/tribalcredit/jobs/4347815004')]", "xpath:href"],
+        ["xpath=//div[29]/a", "xpath:position"]
+      ],
+      "value": "Sr. QA Engineer"
+    }]
+  }],
+  "suites": [{
+    "id": "c5fcc4cc-aeee-4a20-aa14-6236f8cb1ac8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://boards.greenhouse.io/", "https://boards.greenhouse.io/tribalcredit"],
+  "plugins": []
+}
